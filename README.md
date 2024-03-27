@@ -1,4 +1,4 @@
-# Multimodal local llm
+# Multimodal local LLM
 
 ---
 
@@ -13,76 +13,87 @@ The Streamlit LLM Chatbot is a local, private chatbot application designed to fa
 ### Multimodal Interface
 The chatbot supports various input modalities including text, audio, PDF, and images, providing users with a seamless conversational experience.
 
-### LLM Integration
-Powered by a large language model, the chatbot can generate responses, retrieve relevant information, and engage in natural language conversations.
+### Models Used
 
-### ChromaDB Integration
-ChromaDB is utilized as a vector database, enabling efficient storage and retrieval of multimedia data.
+- **LLM Model (Mistral)**: The quantized Mistral model __mistral-7b-instruct-v0.2-code-ft.Q5_K_M.gguf__  is primarily used for textual chat interactions. It generates responses, retrieves information, and engages in natural language conversations.
+  
+- **Whisper Model**: __Whisper AI Small__  is employed for handling audio inputs, enabling the chatbot to process and respond to spoken queries.
 
-### Whisper AI Small
-Whisper AI Small enhances the conversational abilities of the chatbot, enabling it to understand context, generate coherent responses, and maintain engaging dialogues.
+- **LLAVA Model**:  LLAVA __llava_ggml-model-q5_k.gguf__ is utilized for image handling and visual question answering tasks, allowing the chatbot to understand and respond to image-based queries.
+
+- **RetrievalQA**: This model is specialized in handling PDF documents, enabling the chatbot to retrieve relevant information from PDF files and respond to queries based on their contents.
 
 ### cTransformers
 cTransformers is leveraged for text processing tasks, allowing for efficient handling of text inputs and facilitating natural language understanding.
+
+### ChromaDB   
+
+ChromaDB serves as a vector database, storing vector representations of multimedia data items. These vectors are generated using techniques like embeddings or feature extraction, capturing various characteristics of the multimedia content. Stored in a high-dimensional space, each dimension corresponds to a specific feature of the multimedia content. This approach enables ChromaDB to efficiently store and retrieve multimedia data, facilitating fast and accurate retrieval based on similarity metrics in the vector space.   
+
+
+### Session Management with Memory
+
+The chatbot incorporates session management with memory, allowing it to retain context from previous interactions. This enables more personalized and coherent conversations over time, as the chatbot can recall past discussions and tailor its responses accordingly.   
 
 ## Local and Private Nature of the Application
 
 The Streamlit LLM Chatbot operates entirely on your local machine, ensuring that all interactions and data processing occur within your personal environment. This local setup means that no data is transmitted to external company servers during the course of your conversations.
 
-#### Data Privacy
+#### Data Privacy and Security
 
-Your conversations with the chatbot remain confidential and secure as they are not shared with any external parties. Unlike many online chatbots that rely on cloud-based services, our application prioritizes data privacy by keeping all interactions strictly within your local environment.
+The chatbot does not communicate with external servers maintained by third-party companies. There are no dependencies on external services, ensuring that your conversations and any associated multimedia content remain under your jurisdiction at all times.  
 
-#### No External Server Communication
+The local and private nature of the application enhances security and eliminates any concerns regarding data exposure or unauthorized access to your personal information.   
 
-The chatbot does not communicate with external servers maintained by third-party companies. This eliminates any concerns regarding data exposure or unauthorized access to your personal information.
 
-#### Complete Control Over Data
 
-By keeping the application local, you maintain complete control over your data. There are no dependencies on external services, ensuring that your conversations and any associated multimedia content remain under your jurisdiction at all times.
-
-#### Enhanced Security
-
-The local and private nature of the application enhances security by reducing the risk of data breaches or unauthorized access. With all processing conducted locally, you can trust that your sensitive information stays protected within your own computing environment.
-
-### Session Management with Memory
-
-The chatbot incorporates session management with memory, allowing it to retain context from previous interactions. This enables more personalized and coherent conversations over time, as the chatbot can recall past discussions and tailor its responses accordingly.
-
-### Models Used
-
-- **LLM Model (Mistral)**: The Mistral LLM model is primarily used for textual chat interactions. It generates responses, retrieves information, and engages in natural language conversations.
-  
-- **Whisper Model**: Whisper AI Small is employed for handling audio inputs, enabling the chatbot to process and respond to spoken queries.
-
-- **LLAVA Model**: LLAVA is utilized for image handling and visual question answering tasks, allowing the chatbot to understand and respond to image-based queries.
-
-- **RetrievalQA**: This model is specialized in handling PDF documents, enabling the chatbot to retrieve relevant information from PDF files and respond to queries based on their contents.
-
-## Setup and Configuration
-
-To set up the Streamlit LLM Chatbot, follow the instructions provided in the README.md file. Configure the application settings according to your preferences and requirements, ensuring proper paths to models, embeddings, and databases.
-
-## Usage
-
-Once configured, run the application using Streamlit by executing the appropriate command. Access the chatbot through your web browser and interact with it using the supported modalities.
-
-## Disclaimer
-
-This project is intended for personal and private use only. Exercise caution when dealing with sensitive information and ensure data privacy and security at all times.
-
-## Contributions
-
-Contributions to the project are welcome. If you encounter any issues, have suggestions for improvements, or wish to contribute code, please follow the guidelines outlined in the CONTRIBUTING.md file.
-
-## License
-
-The Streamlit LLM Chatbot is released under the [License Name] license. See the LICENSE.md file for more details.
-
-## Contact
-
-For inquiries, feedback, or support, please contact [Your Name] at [Your Email].
 
 ---
 
-*Note: This README provides an overview of the Streamlit LLM Chatbot project. For detailed setup instructions, configuration options, and usage guidelines, refer to the accompanying documentation and codebase.*
+### Setting Up the Environment
+
+1. **Create a Virtual Environment:** It's recommended to use Python 3.10.12. If you haven't already, create a virtual environment by running:
+
+    ```bash
+    python3 -m venv myenv
+    ```
+
+2. **Upgrade pip:** Ensure you have the latest version of pip by running:
+
+    ```bash
+    pip install --upgrade pip
+    ```
+
+3. **Install Requirements:** Install the required dependencies by running:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+    *Note: Windows users may encounter installation differences.
+   
+### Setting Up Local Models
+
+4. **Download Models:** Download the models you wish to use. For image chat, download the LLAVA model (ggml-model-q5_k.gguf and mmproj-model-f16.gguf), and the quantized Mistral model from TheBloke (mistral-7b-instruct-v0.1.Q5_K_M.gguf).
+
+5. **Customize Config File:** Adjust the configuration file (config.yaml) to reflect the models you downloaded.
+
+
+### Initializing Database and Running the Application
+
+6. **Initialize Database:** Initialize the SQLite database for chat sessions by running:
+
+    ```bash
+    python3 database_operations.py
+    ```
+
+7. **Run the Application:** Finally, launch the Streamlit LLM Chatbot by executing:
+
+    ```bash
+    streamlit run app.py
+    ```
+
+---
+
+
+
