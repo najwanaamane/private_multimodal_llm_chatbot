@@ -1,5 +1,4 @@
-# local_multimodal_llm
-Certainly, I'll integrate that into the README:
+# Multimodal local llm
 
 ---
 
@@ -50,6 +49,16 @@ The local and private nature of the application enhances security by reducing th
 
 The chatbot incorporates session management with memory, allowing it to retain context from previous interactions. This enables more personalized and coherent conversations over time, as the chatbot can recall past discussions and tailor its responses accordingly.
 
+### Models Used
+
+- **LLM Model (Mistral)**: The Mistral LLM model is primarily used for textual chat interactions. It generates responses, retrieves information, and engages in natural language conversations.
+  
+- **Whisper Model**: Whisper AI Small is employed for handling audio inputs, enabling the chatbot to process and respond to spoken queries.
+
+- **LLAVA Model**: LLAVA is utilized for image handling and visual question answering tasks, allowing the chatbot to understand and respond to image-based queries.
+
+- **RetrievalQA**: This model is specialized in handling PDF documents, enabling the chatbot to retrieve relevant information from PDF files and respond to queries based on their contents.
+
 ## Setup and Configuration
 
 To set up the Streamlit LLM Chatbot, follow the instructions provided in the README.md file. Configure the application settings according to your preferences and requirements, ensuring proper paths to models, embeddings, and databases.
@@ -76,3 +85,4 @@ For inquiries, feedback, or support, please contact [Your Name] at [Your Email].
 
 ---
 
+*Note: This README provides an overview of the Streamlit LLM Chatbot project. For detailed setup instructions, configuration options, and usage guidelines, refer to the accompanying documentation and codebase.*
