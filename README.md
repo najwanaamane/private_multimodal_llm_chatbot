@@ -1,12 +1,12 @@
-# Multimodal local LLM
+# All-in-One Chatbot
 
 ---
 
-# Streamlit LLM Chatbot
+# Multimodal local LLM
 
 ## Introduction
 
-The Streamlit LLM Chatbot is a local, private chatbot application designed to facilitate interactive conversations with a multimodal interface. This project integrates several cutting-edge technologies including large language models (LLMs), ChromaDB for vector storage, Whisper AI Small for conversational capabilities, and cTransformers for text processing.
+The Streamlit LLM Chatbot is a local, private chatbot application designed to facilitate interactive conversations with a multimodal interface. In this project, LangChain technology serves as the backbone, integrating various Large Language Models (LLMs) including Mistral, LLAVA for image handling, while Whisper AI Small enhances conversational capabilities, and RETRIEVALQA as a pdf question answering chain. ChromaDB is utilized for vector storage purposes, s. Additionally, cTransformers is employed for text processing tasks.
 
 ## Features
 
