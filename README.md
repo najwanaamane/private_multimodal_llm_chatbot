@@ -1,8 +1,8 @@
-# All-in-One Chatbot
+# All-in-One local Chatbot
 
 ---
 
-# Multimodal local LLM
+# Multimodal local LLM Chatbot
 
 ## Introduction
 
