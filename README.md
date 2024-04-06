@@ -11,7 +11,14 @@ The Streamlit LLM Chatbot is a local, private chatbot application designed to fa
 ## Features
 
 ### Multimodal Interface
-The chatbot supports various input modalities including text, audio, PDF, and images, providing users with a seamless conversational experience.
+The chatbot supports various input modalities including text, audio, PDF, and images, providing users with a seamless conversational experience.    
+
+![Screenshot from 2024-03-29 16-32-42](https://github.com/najwanaamane/local_multimodal_llm/assets/86806375/bd1c664c-20f5-45f5-81c3-f3287fd5dcbf)
+![Screenshot from 2024-03-29 02-46-13](https://github.com/najwanaamane/local_multimodal_llm/assets/86806375/4c80dfe1-14c1-402e-b793-23a820b64e09)
+![Screenshot from 2024-03-29 23-41-33](https://github.com/najwanaamane/local_multimodal_llm/assets/86806375/b7bafc12-1b44-49c4-b34d-e205d40e4eea)
+![Screenshot from 2024-03-31 01-04-58](https://github.com/najwanaamane/local_multimodal_llm/assets/86806375/7a797a82-c685-423d-bfdd-b5e2f072215b)![Screenshot from 2024-04-04 22-58-32](https://github.com/najwanaamane/local_multimodal_llm/assets/86806375/77da5951-2991-4d15-9a86-a9473b3fd1d6)
+
+
 
 ### Models Used
 
